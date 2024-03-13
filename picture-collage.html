@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         img{
+            width: 100%;
+            height: 100%;
+        }
+        .row{
+            height: 350px;
+            display:flex;
+            gap: 5px;
+            margin-bottom: 5px;
+            
+        }
+        .row > div{
+            flex: 1;
+        }
+        .img-collage{
+            height: calc( (100% - 5px)/2 );
+           /* height: 49.5%; */
+        }
+        .imges{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+        }
+        /* small device */
+        @media screen and (max-width:576px){
+            .row{
+                flex-direction: column;
+                height: auto;
+            }
+            .imges{
+                grid-template-columns: 1fr;
+            }
+        }
+        /* medium device */
+        @media screen and (min-width: 577px) and (max-width: 992px){
+            .row{
+                flex-direction: column;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <img src="images/wp2601451.jpg" alt="">
+    </div>
+    <div class="row">
+        <div>
+            <img src="images/pictures-nature.jpg" alt="">
+        </div>
+        <div>
+            <img src="images/pictures-nature.jpg" alt="">
+        </div>
+        <div class="img-collage">
+            <img src="images/pictures-nature.jpg" alt="">
+            <img src="images/wxKJ15h.jpg" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div>
+            <img src="images/pictures-nature.jpg" alt="">
+        </div>
+        <div class="imges">
+            <img src="images/DSC_6403.jpg" alt="">
+            <img src="images/DSC_6403.jpg" alt="">
+            <img src="images/DSC_6403.jpg" alt="">
+            <img src="images/DSC_6403.jpg" alt="">
+        </div>
+        <div>
+            <img src="images/ClickHere_1462609041.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>
